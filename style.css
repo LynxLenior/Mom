@@ -5,24 +5,70 @@
     padding: 0;
     box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333a4; 
+  color: #fff; 
+  padding: 15px;
+  text-align: center;
+  z-index: 1000; 
 }
 
 body {
+    background: url('Pictures/BgBoy.jpg');
     display: grid;
     place-content: center;
     height: 100vh;
     width: 100vw;
 	overflow: hidden;
-	background: #f1c40f;
+}
+/*Images*/
+img {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    bottom: 40%;
+    border: 9px solid #ff89a1;
+    border-radius: 10%;
+}
+p {
+    position: absolute;
+    top: 65%;
+    font-size: 25px;
+    text-align: justify;
+    padding: 35px;
+}
+h1 {
+    text-align: center;
+    font-weight: normal
+}
+.HAILEY {
+    font-weight: normal;
+    text-align: justify;
+    padding: 110px;
+    font-size: 30px;
+}
+h2 {
+    text-align: center;
+    font-weight: normal;
+    text-align: justify;
+    padding: 110px;
+    font-size: 30px;
 }
 
 .flipbook {
-    width: 1000px;
-    height: 600px;
+    width: 1500px;
+    height: 1000px;
 }
 
+
 .flipbook .hard {
-    background: #c0392b !important;
+    background: #804d00 !important;
     color: #fff;
     font-weight: bold;
     border: none; 
@@ -32,17 +78,27 @@ body {
 	font-style: italic;
 	font-weight: lighter;
 	opacity: 0.7;
-	font-size: 14px;
+	font-size: 14px; 
 }
 
 .flipbook .page {
-    background: white;
+    background: url('Pictures/Paper.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
     gap: 10px;
     border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.flipbook .collage-page {
+    background-image: url('Pictures/CollBg.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
 }
 
 .page img{
@@ -54,4 +110,24 @@ body {
 .flipbook .page small{
 	font-size: 14px;
     margin-bottom: 10px;
+}
+#prev-btn {
+    left: 18.5%;
+}
+
+#next-btn {
+    right: 20%; 
+}
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ff89a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    z-index: 500;
 }
